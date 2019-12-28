@@ -1,0 +1,110 @@
+Apache Kafka (Distrubuted Messsaging System)
+============================================
+
+Tradiotional Data Processing
+==============================
+1.Collect the data from different sources
+2.Store in some where (Data Lake)
+3.Processing the data
+
+Big Data Processing
+==============================
+1.Collect the data from different sources
+2.Store in some where (Data Lake)
+3.Processing the data
+
+No Data  -> No Data Processing
+
+Data Lake -> Stationary
+
+Stream processing
+
+Stream : Flow of data or Data in motion
+
+Real time Stream processing
+
+             Data per m/s ,second, per minute
+
+
+Start Zookeeper
+===============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+Start Kafka Server
+==================
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-server-start.bat ..\..\config\server.properties
+
+List the topics
+================
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>kafka-topics.bat --list --zookeeper localhost:2181
+
+
+Create topic
+=============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>kafka-topics.bat --create --topic pradeep --partitions 2 --replication-factor 1 --zookeeper localhost:2181
+
+Describe topic
+===============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>kafka-topics.bat --describe --topic pradeep  --zookeeper localhost:2181
+
+
+File Connector Example
+========================
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start connect-standalone.bat ..\..\config\connect-standalone.properties ..\..\config\connect-file-source.properties ..\..\config\connect-file-sink.properties
+
+
+
+
+
+
+
+
+Start Producer
+===============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-prdoucer.bat --broker-list localhost:9092 --topic pradeep 
+
+Start consumer
+==============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic pradeep --partition 0
+
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic pradeep --partition 1 --from-beginning
+
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic pradeep --partition 1 --offset 2
+
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic pradeep --partition 0 --from-beginning
+
+
+=======================
+
+Create topic  ->streams-plaintext-input
+=============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>kafka-topics.bat --create --topic streams-plaintext-input --partitions 1 --replication-factor 1 --zookeeper localhost:2181
+
+
+Create topic  ->streams-wordcount-output
+=============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>kafka-topics.bat --create --topic streams-wordcount-output --partitions 1 --replication-factor 1 --zookeeper localhost:2181
+
+
+Start Word count Stream application
+===================================
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-run-class.bat org.apache.kafka.streams.examples.wordcount.WordCountDemo
+
+
+
+Start Producer
+===============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-producer.bat --broker-list localhost:9092 --topic streams-plaintext-input
+
+
+
+Start Consumer
+===============
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic streams-plaintext-input
+
+
+E:\kafka_2.12-2.3.1\kafka_2.12-2.3.1\bin\windows>start kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic streams-wordcount-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+
+
+
+
