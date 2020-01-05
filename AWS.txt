@@ -1,0 +1,641 @@
+Build 
+highly avaialble ,reliable,secure,scalable (performance) based applications.
+
+Prerequisite:
+=============
+What you want to do?
+
+System adiministrator :knowledge linux and windows.
+
+Developer around cloud :python,ruby Java
+
+AWS supports multiple languages: Java,.Net,PHP,Python
+
+Modules
+=======
+Module 1: AWS Cloud essentails -an overview
+============================================
+Module 2:AWS Fundamentals
+============================================
+Module 3:AWS console and usage
+=============================================
+Module 4:AWS Software Development Kit nad Command Line tool kit
+===============================================================
+Module 5:Monitoring and Metrics
+==============================================================
+Module 6:High Availability :
+===============================================================
+Module 7:Analysis and Data Managment
+===============================================================
+Module 8:Security and networking
+===============================================================
+Module 9:Deployment and provisioning
+==========================================================
+Module 10:Big Data and analytics
+=============================================================
+Module 11:Cloud Best practices
+===============================
+Module 12:Cost optimization
+============================
+
+
+
+
+
+
+
+
+
+Modules
+========
+
+Module 1: AWS Cloud essentails -an overview
+============================================
+1.What Cloud is about?
+2.When to use cloud?
+3.When to not use cloud? 
+4.Types of clouds : 
+  private
+  public
+  hybrid
+  community
+
+  IAAS
+  PAAS
+  SAAS
+  CAAS
+ 
+differnt usecases 
+
+In Industry where AWS is being used?
+
+  Building small simple website.
+  Complex machine learning analytics.
+
+
+Module 2:AWS Fundamentals
+============================
+What AWS has to offer?
+
+  Compute => EC2,ECS,EKS...
+        
+  Storage => S3, RDS, DynamoDB
+  Networking => VPC,Router53
+  Security =>Firewalls,IAM,Macy
+
+
+
+Module 3:AWS console and usage
+===============================
+Interaction with AWS
+ 1.AWS console Web UI (Easiest way to ineract with amazon)
+ 2.CLI
+ 3.SDK (Jaormationva,Python0
+ 4.Cloud Formation (automatic way)
+
+
+Module 4:AWS Software Development Kit nad Command Line tool kit
+==================================================================
+1.We can write programs in different languages
+2.Using CLI we can run commands which automatially it create a server
+
+
+Module 5:Monitoring and Metrics
+==================================
+Once we create a application in cloud we need to monitor the application 
+for performance and availability (Cloud Watch  similar to task manager)
+
+
+
+
+Module 6:High Availability :
+===========================
+If server is busy and using 100% CPU we need to add one more server It may crash or hang
+
+Scale up or scale down
+
+if (cpu >80 ) add another server
+
+Ecommerce Flipcart IRCTC,Aamazon avialable 24/7   doesn't cause customer distruption or any
+busienss impact
+
+Mumbai (website) 
+Sydney (website) 
+Tokyo  (website) 
+
+Monitoring and autoscaling works together.
+
+Module 7:Analysis and Data Managment
+====================================
+Multiple ways to store the data
+
+EBS (Elastic Block storage) =>Hard disk
+S3  (Simple Storage Service) =>Folders and Files
+RDS RDBMS in cloud
+
+Given a particular requirement what to pick and what not to pick.
+
+
+Module 8:Security and networking
+===================================
+When we build the application we need to think about how to secure it
+we need to save the data we need to encrypt the data.
+when we send the data across the net work we have to encrypt the data
+How to restrict access.
+
+                         
+  Production Users :  Server1 ,Server2,Server3
+
+  Development Users : Server3 ,Server4,Server6
+
+
+using IAM we can do this.
+
+
+Module 9:Deployment and provisioning
+======================================
+
+
+    VPC ([ Load Balancer =>  (firewall[HDD=>Server=>RDS]) ] )
+
+
+  Whole stack becomes very complicated
+  If you create each one manually probality of missing something
+
+  We need to automate using Cloud formation (YAML or JSON languages)
+
+  YAML
+    =>Server (big,small,medium)
+    =>Linux,windows
+    =>Tokyo,sydney
+    =>RDS =>(MySQL,Postgreys)
+
+  If you want to send documentation about how to set up server and RDS.
+  
+  you can create Cloud Formation template in yaml or json and share with customer.
+  You can aotomat everything.
+
+  Puppet
+  chef
+  ansible
+  
+Module 10:Big Data and analytics
+===================================
+Big data processing in cloud
+
+Big Data
+       ===> processing and storing huge amount of data
+       
+
+
+Module 11:Cloud Best practices
+===============================
+while constructing the building if foundation is not solid there can be structural
+problem in building.
+
+Module 12:Cost optimization
+============================
+We can create as many server as you want
+
+Cost optimization at different level
+compute
+storage
+databse
+networking
+we can deploy the application faster
+we can save some money
+================================================================================================
+
+
+
+
+
+=============================================
+Module 1: AWS Cloud essentails -an overview
+=============================================
+1.Basic Overvie of the cloud
+2.Different types of cloud models and cloud services
+3.Different vendors of cloud implementation
+4.Features of AWS and Managed services offerings
+5.Why to choose AWS
+6.Real time use cases
+Oppurtinities in Cloud/Market
+
+
+
+If you want to create a website
+
+Procurr h/w
+Space room or building
+security(guards,n/w security,application security)
+Routers
+Cooling
+
+It takes couple of weeks
+
+With cloud we have bunch of machines mainated,provisioned ,created by cloud vendor by AWS.
+
+
+
+What is Cloud Computing ?
+==========================
+Cloud computing refers to the on-demand delivery of IT resources and applications via the internet with pay as you go pricing
+
+Cloud computing is also a utility service giving you access to technology resources managed by experts and available on demand
+
+
+Features of Cloud
+===================
+On-Demand Provisioning
+Scalability in minutes
+Pay Per consumption (No Long term commitments and upfront capital needed)
+Abstract resources
+Efficiency of Experts
+Measurable
+
+
+
+On Premise Vs AWS
+
+On Premise ==> 30% focus on business  and 70% Managing all undifferentiated Heavy Lifting
+
+AWS        ==> 70% focus on business and 30% on configuring your cloud assets
+
+
+
+
+Different Types of Cloud Models (Dimensions of the cloud)
+==============================================================
+Private :BOA ,Microsoft
+Public :AWS,GCP,Azure
+Hybrid :
+Community: SBI,Axis,HDFC,Kotak
+
+
+
+Different types of cloud services
+==================================
+IAAS =>Virtual Machines,Servers,Storage,Load Balancers,Network
+
+SAAS =>Salsforce,office 365,gmail,yahoo,web mail
+
+PAAS =>Execution rutime Databases,Web servers,development tools
+
+CAAS
+
+Features of AWS and managed services 
+=====================================
+Compute :
+         Virtual Servers
+	 Containers
+	 Event Driven Compute Functions
+	 Auto scaling
+	 Load Balancing
+	 1-Click Web App Deployment(EBS)
+
+Storage & Contenet Delivery
+
+         Object Storage - S3
+	 Block Storage  -H/D
+	 File System Storage -FS
+	 Archive Storage -Magenetic 
+	 Integrated Storage
+	 CDN -
+
+
+Databases :
+
+         Relational ->MySQL,Postgress
+	 NOSQL -Cassandra,Hbase,Mongo,Couch,Mongo DB,DynomoDB,Neo
+	 Caching
+	 Data ware house
+
+
+Networking :
+
+         Virtual Private Cloud
+	 Direct connections
+	 DNS (Route 53)  http://localhost:9090/mywebapp =>www.pradeep.com
+	 Load Balancing (Application,Network,Classic)
+
+
+Security And Identity :
+
+        Identity Management
+	Access control
+	Key storage & Management
+	Performance & Security Management
+
+
+
+Application Services :
+
+	Queueing
+	Workflow
+	App streaming
+	Transcoding
+	Email
+	Notifications
+	Search
+	API Management
+
+Management Tools :
+	Monitoring & Logs
+	Resource Temlates
+	Usage & Resource Auditing
+	Dev/ops Resource Management
+	Service Catalog
+
+Mobile Services:
+	Identity
+	App Testing
+	Mobile Analytics
+	Notifications
+	Development
+
+Developer Tools:
+
+	Source Code Management -GIT
+	Code Deployment   - EBS
+	Continuous Delivery -Jenkins
+
+Analytics
+         Hadoop
+	 Elastic Search
+	 Real-time
+	 Machine Learning
+	 Data Warehouse
+	 Data Pipelines
+
+kinesis for real time processing of th data
+
+Manufacturing==>
+             Devices=>IOT=>data=>Kinesis
+                
+
+
+Usecases
+=========
+ Databases archives or low cost data backups on cloud
+ Building Disaster recovery sites on cloud
+ SAAS based applications hosting
+ Content delivery and media distrubition
+ Hi Perofrmance computing,autoscaling and load balancing HA models
+ Big data batch jobs & large scale analytics
+ Cloud based applicatio services like queue's,workflow
+ Hosting mobile platform based applications
+ Hosting effective large work loads of data ware houses
+
+
+==================================================================================================
+
+============================
+Module 2:AWS Fundamentals
+============================
+AWS Servie Catalog,Paradigm and Console
+
+Overview and usage of below services
+
+Compute Service
+Storage Service
+Database Service
+Content Delivery Service
+Network Service
+Application Service
+Deploy and Management Service
+
+
+AWS Geographical Components
+===============================
+AWS Regions
+Zones
+Edge Location
+
+Global Infrastructure Zone
+
+
+Region => AZ1 (DC1,DC2...) => AZ2 (DC1, DC2......)
+
+IAM =>Global
+
+Server,RDS =>Non Global =>Region specific
+
+https://aws.amazon.com/about-aws/global-infrastructue
+
+https://aws.amazon.com/console
+
+
+Some objects are region specific like EC2,S3
+AWS has most regions.Compared with others
+For sake of compliane
+
+Why regions
+=============
+Compliance 
+High Availability
+Latency
+
+Edge Location :
+        For Content distrubution (Static HTML Pages,Audio or Videos)
+	Cache the frequently user files
+
+
+Compute Service
+===============
+	Compute Service is responsible for managing Virtual Server and dependent components like RAM,processor,network,storage
+	
+	1.Amazon EC2 (Elastic Cloud Compute)
+	      
+	       : for provisioning a virtual machine along with CPU,RAM,Storage,n/w etc.
+
+		Pricing Model
+		  1.On Demand (per second basis with minimum 1 minute) : High costlier 
+		  2.Reserved  (1 year ,3 year ,upfront payment discount ) :2 Most cheapest
+		  3.Spot Instances   :1 Most cheapest (App is tolerant to failures)
+
+
+
+	2.Auto Scaling 
+	       
+	       : for configuring scaling up and down the number of the EC2 instances depending on configured metrics (ex.CPU utilization) for EC2 and RDS
+	
+	3.Elastic Load Balancing
+	
+		: for distrubuting traffic or load to underlying EC2 instances 
+		: This service has capabilities to monitor the underlying EC2 instances and distrubute the traffic to the active nodes.   
+
+	4.Amazon EMR (Elastic Map Reduce)
+		
+		:used for running batch jobs to process huge amounts of unstructured data
+		:AWS uses customized instances and provides  a Apache Map/Reduce platform to execute big data related batch jobs
+                           
+                         
+                        Spark,Hive,Pig,Sqoop,Oozie,MAp Reduce
+
+                                 upload the data in aws
+				 upload the code in aws
+				 run the job
+
+
+
+Network Service
+===============
+              :Responsible for managing virtual server and provide the networking capabilities
+	      for compute service
+
+	      1.Amazon VPC (Virtual Private Cloud)
+
+		    Network
+		        Sub Network1 (Acounts)
+			Sub Network2 (Customers BOA)
+			Sub Network3 (Customers of Microsoft)
+			
+
+                        
+
+	      2.AWS Direct Connect
+	            D.C=> Direct Connect => AWS Cloud
+	      
+	      
+	      3.Amazon Rooute 53 
+	            (Domain Register :www.pradeep.com)
+	            DNS (www.google.com =>resolves in ip address===> 1.2.3.4)                
+	         
+	              
+
+
+Storage Service
+================
+	:resoponsible for managing the storage and offers the solutions for cheap storage,
+	 high performance and input/output solutions.
+
+	Amazon S3
+	       https://aws.amazon.com/s3/storage-classes
+
+	       cost for storage(GB) ,accessing 1 or 100 times,network transfer(download or upload)
+
+
+	Amazon EBS (Elastic Block Storage)
+	            
+		    EC2=>EBS (temp Linux 8GB,Windows 30 GB)=>additional EBS
+
+		    EBS
+		       1.SSD=>fast,costly,smaller (1 TB)
+		       2.Magenetic=>slow,big,cheap(1 PB)
+
+
+	Amazon EFS (Elastic File System)
+	           No need to specify storage capacity 
+		   it expand automatically
+		   EC1,EC2 =>EFS
+
+	AWS Storage Gateway :
+	     (Company[App1,App2,App3] =>Storage Gatway)====>([data]AWS Cloud)
+		   Cloud unaware apps
+	
+	Amazon Data Transfer Services
+	
+	
+	Amazon Glacior
+		=>Store the data in tape
+		=>cheap
+		=>access is slow (hours)
+		   archival of data or backup
+	           Infrequently accessed archived data    
+
+
+
+
+
+
+
+
+
+
+Database Service
+================
+	Amazon RDS (Auto Scaling)
+		MySQL
+		Postgress
+		Aurora (3 times faster than postgress and 5 times faster than MySQL)
+		SQL Server
+
+	Amazon DynamoDB 
+	      (NO SQL[Key value,document,Column,Graph])
+               Serverless
+	       Single digit ms ops.
+	       automatically scale behind the scenes
+
+
+
+	Amazon ElastiCache
+
+
+Content Delivery Service (Akamei)
+==================================
+	
+	                                    EC2 (dynamic)
+user  ======>Cloud Front(static)   ========>EC2 (dynamic)
+				            EC2	(dynamic)
+
+
+Application Service
+====================
+	AWS offers several application services that allow the developers to build reliable,highly scalable and distrubuted applications for the cloud
+
+	1.Amazon SES (Simple Email Service)
+		Java Application (Email Template & List of emails) =>AWS Cloud
+	
+	2.Amazon SQS (Simple Queue Service )=>This is first service from AWS
+		Active MQ
+		Rabbit MQ
+		IBM MQ
+
+	3.Amazon SWF (Simple Work Flow Service)
+	
+	4.Amazon SNS (Simple Notification Service)
+
+		Publisher => Broker (Topic) <= Consumer
+
+	5.Amazon Cloud search 
+		
+		when upload the data in cloud AWS creates index by using which we can search the data.
+              
+	      Ex.   1.Elastic Search
+                    2.Splunk 
+
+Deploy and Management Service
+==============================
+	AWS offer services that make my application deployment and AWS resource management a simple ,predictable and repeatable process
+
+	1.Amazon Elastic Beanstalk (PAAS)
+		1.Bundle the code (jar,war,zip)
+		2.upload to Elatic Beanstalk
+		3.Automatically creates
+			Webserver
+			Database
+			Loade balancer
+			Auto scaling
+
+	2.Amazon IAM
+		
+	3.Amazon Cloud watch
+	4.Amazon Cloud Formation
+		
+		Cloud Formation template =>stack=>automatically creates the aws resources
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
