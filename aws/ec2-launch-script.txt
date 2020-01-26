@@ -1,0 +1,25 @@
+sudo su
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+service httpd status
+echo "Hello Students!!  Welcome to AWS EC2 Service at Atos" > /var/www/html/index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

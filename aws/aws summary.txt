@@ -1,0 +1,139 @@
+Amazon web service is a platform that offers flexible, reliable, scalable, easy-to-use and costeffective cloud computing solutions.State True or False
+
+
+Using AWS, you can requisition compute power, storage, and other services in minutes and have the flexibility to choose the development platform or programming model that makes the most sense for the problems they’re trying to solve.State True or False
+
+
+With AWS, organizations pay only for what they use, without up-front or long-term commitments. 
+
+Which of the following are Cloud Compute Services offered by Amazon?
+
+Which  AWS service allows you to run functions in the cloud and is a big cost saver for you as you to pay only when your functions execute?
+
+_______________ is a software appliance that seamlessly links your on-premises environment to Amazon cloud storage.
+
+______________________provides a simple, scalable, elastic file system for Linux-based workloads for use with AWS Cloud services 
+
+____________ is object storage designed to store and access any type of data over the Internet.
+
+______________ Store and process block data on persistent volumes for Amazon EC2 instances 
+
+________________are secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup.
+
+______________________ lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define
+
+_____________ is a secure cloud security service which helps you to manage users, assign policies, form groups to manage multiple users
+
+Using AWS Identity and Access Management (IAM) , you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.State True or False
+
+There is a hard limit on how much data you can store on S3.State True or False
+
+After successfully uploading a file to S3, what HTTP response code should you expect to see?
+There is a hard limit on how much data you can store on S3.State True or False
+
+Which of the following are valid types of Elastic Load Balancers? 
+
+Which of the following tools can you use to monitor CPU utilization metrics for your EC2 instances?
+
+_____________ is easy to set up, operate, and scale a relational database in the cloud
+
+___________ is a web service which makes it easy to deploy, operate, and scale an in-memory cache in the cloud. 
+
+ _____________ is a fast, fully managed NoSQL database service which allow cost-effective storage and retrieval of data and  allows you to serve any level of request traffic. 
+
+What is the default region for all SDKs?
+
+Inline policy can only be attached to a single user ,group or role.State Tre or False
+
+Inline policy is deleted if the associated user user ,group or role is deleted.State True or False
+
+
+
+
+You are a developer for a genomics firm that is moving its infrastructure to AWS. Their environment consists of a three-tier web application, a web tier, an application tier and a relational database tier. They have a separate fleet of virtual machines that are used to access large HPC clusters on the fly. Their lab researches run multiple projects simultaneously and they will need to launch and decommission 1,000's of nodes on-demand while reducing the time required to complete genomic sequencing from weeks to days. In order to stay competitive they need to do this at as low cost as possible, with no long-term contracts. These HPC clusters can run any time day or night and their workloads store information in S3, so the instances can be terminated at any time without any effect on the data. What is the most COST EFFECTIVE EC2 pricing model for their requirements?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You run the internal intranet for a corporate bank. The intranet consists of a number of webservers and single relational database running Microsoft SQL Server. Your peak demand occurs at 9am every week morning when users are first logging in to the intranet. They can only log in using the company's internal network and it is not possible to access the intranet from any location other than within the office building for security purposes. Management is considering a change and to move this environment to AWS where users will be able to access the intranet via a software VPN. You have been asked to evaluate a migration to AWS and to identify the best EC2 billing model for your company's intranet. You must keep costs low and to be able to scale at particular times of day. You must maintain availability of the intranet throughout office hours. Management do not want to be locked into any contracts in case for some reason they want to go back to hosting internally. What EC2 billing model should you recommend?
+
+
+
+
+
+
+
+
+
+
+
+
+You are the IT manager at a furniture retailer and they are considering moving their web application to AWS. They currently colocate their servers in a colocation facility and the contract for this facility is now coming to an end. Management are comfortable signing a 3 year contract and want to get the cheapest web servers as possible while still maintaining availability. Their traffic is very steady and predictable. What EC2 pricing model would you recommend to maintain availability and to get the lowest cost price available?
+
+
+
+
+
+
+
+
+
+
+Which statement best describes IAM?
+
+
+
+
+
+
+
+
+
+What is an IAM Policy?
+
+
+
+Which IAM entity can you use to delegate access to your AWS resources to users, groups or services?
+
+
+
+
+Which of the following is NOT a feature of IAM?
+
+Amazon S3 provides ________.
+
+Individual instances are provisioned into ________.
+
+You have a list of email addresses to which you need to push emails on a periodic basis. What do you subscribe them to?
+
+
+
+Which  AWS service is used to deploy and manage the web applications?
+
+With EC2, you can have 2 types of storage: EBS or Instance Store. EBS is persistent,and if an EC2 instance is stopped with an EBS volume attached, there will be no data lost.Instance Store is ephemeral and if the EC2 instance is stopped, all data will be lost.State True or False
+Which of the following database services are provided by AWS?
+Which of the following thing can do using IAM?
+
+Which of the following offerings are provided by AWS Platform ?
+
+Which of the following features distinguish AWS?
+
+Which of the following services can you use to monitor all API activity in your AWS account?
+
+Which of the following services can you use to monitor and report on performance metrics for your AWS Infrastructure?
+
+Which of the following tools can be used to determine who provisioned an EC2 instance and what time they made the API call?
+
+Which native AWS service will act as a file system mounted on an S3 bucket?
+
+SQS was the first service on the AWS platform. State True or False
