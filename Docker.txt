@@ -1,0 +1,721 @@
+Docker Training Details  :
+=======================
+
+              Training Time :  10:15 PM  IST
+
+
+External Users dial
+======================
+US:  +1-919-948-2233 or +1-919-719-5708    Passcode : 676259 
+Erope : +48-123-232-560                       
+
+Offshore via Mobile :
+========================
+Please dial : 0-22-67874110 or +91-2241137602   :Passcode: 023293
+
+
+
+1.Difference between virtulization and containerization
+2.What is Docker?
+3.Docker Architecture
+4.Hands on
+
+1.Why Docker?
+
+2.What is a docker ?
+=====================
+Docker is a container management service. 
+The keywords of Docker are develop, ship and run anywhere.
+The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
+
+3.Features of Docker
+====================
+
+=>Docker has the ability to reduce the size of development by providing a smaller footprint of the operating system via containers.
+
+=>With containers, it becomes easier for teams across different units, such as development, QA and Operations to work seamlessly across applications.
+
+=>You can deploy Docker containers anywhere, on any physical and virtual machines and even on the cloud.
+
+=>Since Docker containers are pretty lightweight, they are very easily scalable.
+
+
+4.Components of Docker
+======================
+
+=>Docker for Mac - It allows one to run Docker containers on the Mac OS.
+
+=>Docker for Linux - It allows one to run Docker containers on the Linux OS.
+
+=>Docker for Windows - It allows one to run Docker containers on the Windows OS.
+
+=>Docker Engine - It is used for building Docker images and creating Docker containers.
+
+=>Docker Hub - This is the registry which is used to host various Docker images.
+
+=>Docker Compose - This is used to define applications using multiple Docker containers.
+
+
+5.Installation of Docker on windows?
+
+    Refer this site :
+
+    https://docs.docker.com/toolbox/toolbox_install_windows/
+
+
+  For windows we need to download Docker toolbox.
+
+
+To Check Installation
+=======================
+
+1.docker version  :shows the version of docker
+
+2.docker info     :gives the information of docker
+
+Docker Basic Commands
+=====================
+
+Basic
+: docker version
+: docker -v 
+: docker info
+: docker --help
+: docker login
+
+————————————
+Images
+: docker images
+: docker pull
+: docker rmi
+————————————
+Containers
+: docker ps
+: docker run
+: docker start -i <container-name>
+: docker stop
+: docker logs
+————————————
+System
+: docker stats
+: docker system df
+: docker system prune (to stop all stoped containers)
+
+
+
+Downloading the Latest MongoDB Docker Image
+===========================================
+   Syntax : docker pull <image-name>  or docker pull <image-name>:<tag>
+
+    Example : docker pull mongo or docker pull mongo:4.0.4
+
+
+Deploying an Instance of MongoDB as a Container
+====================================================
+   Syntax : docker run --name <alias-name> <image-name>:tag
+
+   Example : docker run --name mongodb mongo:4.0.4 
+
+
+
+Interacting with the MongoDB Docker Container with Basic Shell Operations
+==========================================================================
+
+  Syntax :docker exec -it <image-name> bash 
+
+  Example : docker exec -it mongodb bash
+
+
+
+1. What are images
+2. How to pull image
+3. How to run a container using an image
+4. Basic Commands
+
+TIPS & TRICKS
+
+
+What are Images ?
+=================
+
+Docker Images are templates used to create Docker containers
+Container is a running instance of image
+
+Where are Images Stored
+Registries (e.g. docker hub)
+Can be stored locally or remote
+
+: docker images --help
+: docker pull image
+: docker images
+: docker images -q
+: docker images -f “dangling=false”
+: docker images -f “dangling=false” -q
+
+: docker run image
+: docker rmi image
+: docker rmi -f image
+
+: docker inspect
+: docker history imageName
+
+
+
+1. What are Containers
+2. How to create Containers
+3. How to start / stop Containers
+4. Basic Commands
+
+TIPS & TRICKS
+
+
+What are Containers:
+Containers are running instances of Docker Images
+
+
+COMMANDS
+: docker ps
+: docker run ImageName
+: docker start ContainerName/ID
+: docker stop ContainerName/ID
+
+: docker pause ContainerName/ID
+: docker unpause  ContainerName/ID
+
+: docker top ContainerName/ID
+: docker stats ContainerName/ID
+
+: docker attach ContainerName/ID
+
+: docker kill ContainerName/ID
+: docker rm ContainerName/ID
+
+: docker history ImageName/ID
+
+
+
+What is a Container ?
+=====================
+
+A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings.
+
+Features of Containers:
+======================
+=>Are lightweight
+=>Fewer resources are used
+=>Booting of containers is very fast
+=>Can start, stop, kill, remove containers easily and quickly
+=>Operating System resources can be shared within Docker
+=>Containers run on the same machine sharing the same Operating system Kernel, this makes it faster
+=>You can use the command docker start container to start container in stopped state
+
+
+
+Docker File
+=============
+
+1. What is Dockerfile
+2. How to create Dockerfile
+3. How to build image from Dockerfile
+4. Basic Commands
+
+TIPS & TRICKS
+
+Dockerfile : 
+A text file with instructions to build image
+Automation of Docker Image Creation
+
+FROM 
+MAINTAINER 
+RUN
+CMD
+
+
+
+Step 1 : Create a file named Dockerfile
+
+Step 2 : Add instructions in Dockerfile
+
+Step 3 : Build dockerfile to create image
+
+Step 4 : Run image to create container
+
+
+Example  :Dockerfile
+
+FROM ubuntu
+MAINTAINER Pradeep Chinchole <pradeepch82@gmail.com>
+RUN apt-get-update
+CMD ["echo", "Hello World..! from my first docker iamge"]
+
+
+COMMANDS
+: docker build 
+: docker build -t ImageName:Tag directoryOfDocekrfile
+: docker run image
+
+
+
+References:
+
+https://www.youtube.com/redirect?event=video_description&v=LQjaJINkQXY&redir_token=E3PErBNVcg9u6KYx6LdmsGYdf4x8MTU2Mjc3ODI4OUAxNTYyNjkxODg5&q=https%3A%2F%2Fgithub.com%2Fwsargent%2Fdocker-cheat-sheet%23dockerfile
+
+https://www.youtube.com/redirect?event=video_description&v=LQjaJINkQXY&redir_token=E3PErBNVcg9u6KYx6LdmsGYdf4x8MTU2Mjc3ODI4OUAxNTYyNjkxODg5&q=https%3A%2F%2Fdocs.docker.com%2Fengine%2Freference%2Fbuilder%2F%23environment-replacement
+
+
+Docker Compose
+==============
+
+1. What | Why - Docker Compose
+2. How to install
+3. How to create docker compose file
+4. How to use docker compose file to create services
+5. Basic Commands
+
+
+TIPS
+
+Docker compose
+: tool for defining & running multi-container docker applications
+: use yaml files to configure application services (docker-compose.yml)
+: can start all services with a single command : docker compose up
+: can stop all services with a single command : docker compose down
+: can scale up selected services when required
+
+
+Step 1 : install docker compose
+   (already installed on windows and mac with docker)
+   docker-compose -v
+   
+   2 Ways
+
+   1.  https://github.com/docker/compose/rel...
+
+   2. Using PIP
+    pip install -U docker-compose
+
+Step 2 : Create docker compose file at any location on your system
+   docker-compose.yml
+
+
+version: '3'
+ 
+services: 
+  web:
+    image: nginx
+
+  database:
+    image: redis
+  
+
+
+Step 3 : Check the validity of file by command
+    docker-compose config
+
+Step 4 : Run docker-compose.yml file by command
+   docker-compose up -d
+
+Steps 5 : Bring down application by command
+   docker-compose down
+
+TIPS
+How to scale services
+
+—scale
+docker-compose up -d --scale database=4
+ 
+
+
+
+Docker Volume
+===============
+
+1. What are Volumes
+2. How to create / list / delete volumes
+3. How to attach volume to a container
+4. How to share volume among containers
+5. What are bind mounts
+Volumes are the preferred mechanism for persisting data generated by and used by Docker containers
+
+: docker volume  //get information
+: docker volume create
+: docker volume ls
+: docker volume inspect
+: docker volume rm
+: docker volume prune
+
+
+Use of Volumes
+===================
+Decoupling container from storage
+Share volume (storage/data) among different containers
+Attach volume to container
+On deleting container volume does not delete
+
+
+Commands
+
+docker run --name MyJenkins1 -v myvol1:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins
+
+docker run --name MyJenkins2 -v myvol1:/var/jenkins_home -p 9090:8080 -p 60000:50000 jenkins
+
+docker run --name MyJenkins3 -v /Users/raghav/Desktop/Jenkins_Home:/var/jenkins_home -p 9191:8080 -p 40000:50000 jenkins
+
+
+
+http://192.168.99.100:8080
+
+   username :admin
+   password :generated container log console 
+
+http://192.168.99.100:9090
+
+
+
+3cb766c972cb41e490d7496dedac3811
+
+
+
+References
+https://hub.docker.com/_/jenkins/
+https://docs.docker.com/storage/volumes/
+
+
+
+NOTES
+
+By default all files created inside a container are stored on a writable container layer
+
+The data doesn’t persist when that container is no longer running
+
+A container’s writable layer is tightly coupled to the host machine where the container is running. You can’t easily move the data somewhere else.
+
+Docker has two options for containers to store files in the host machine
+so that the files are persisted even after the container stops
+
+VOLUMES  and  BIND MOUNTS
+
+Volumes are stored in a part of the host filesystem which is managed by Docker
+
+Non-Docker processes should not modify this part of the filesystem
+
+Bind mounts may be stored anywhere on the host system
+
+Non-Docker processes on the Docker host or a Docker container can modify them at any time
+
+In Bind Mounts, the file or directory is referenced by its full path on the host machine. 
+
+
+Volumes are the best way to persist data in Docker
+
+volumes are managed by Docker and are isolated from the core functionality of the host machine
+
+A given volume can be mounted into multiple containers simultaneously.
+
+When no running container is using a volume, the volume is still available to Docker and is not removed automatically. You can remove unused volumes using docker volume prune.
+
+When you mount a volume, it may be named or anonymous. 
+
+Anonymous volumes are not given an explicit name when they are first mounted into a container
+
+Volumes also support the use of volume drivers, which allow you to store your data on remote hosts or cloud providers, among other possibilities.
+
+
+create database company;
+use company;
+create table employees(id int primary key,name text,salary float);
+insert into employees values(101,'Pradeep',10000);
+insert into employees values(102,'Ram',10000);
+insert into employees values(103,'Pranam',10000);
+
+
+
+
+
+
+Linking Docker containers with Links
+===========================================
+
+Links allow the containers to discover each other and securely transfer the information about one container to another container.
+
+Syntax
+=======
+
+docker run --name <local_container_ name> --link <localcontainer name>:<Actual Container Name>
+
+
+docker pull mysql
+
+docker run --name pcmysql -e MYSQL_ROOT_PASSWORD=admin -d mysql:latest 
+
+docker run --name pc-mysql -e MYSQL_ROOT_PASSWORD=root -d mysql
+
+
+docker run --name mysql-standalone -p 3306:3306 -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=test -e MYSQL_USER=pradeep -e MYSQL_PASSWORD=password -d mysql:5.6
+
+
+
+docker run -p 1122:8080 --name docker-ems-mysql --link mysql-standalone:mysql -d ems-mysql
+
+docker pull wordpress
+
+docker run --name pcwordpress --link pc-mysql:mysql -p 8080:80 -d wordpress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Docker is a software Contairnerization platform
+
+Difference Virtualization vs Contairnerization
+==================================================
+Virtulization
+==============
+
+Host os=> Hypervisor=>(Guest os1,Guest os2....)=>(Bin& Lib, Bin & Lib 2.....)=>(App1,App2,.....)
+
+1.Virtualization is a technique of importing a guest os on the top of host os.
+2.This technique is revolution in the beginning because Developers run the different application in different vms all running on same host.
+3.This eliminate the need of extra h/w resource and enable the backup allowing the the recovery in failure conditions
+4.lowering the total cost of foundation.
+ Advantages
+ ==========
+   1.Multiple OS in the same machine
+   2.Easy Maintainance and Recovery
+   3.Lower total cost of Ownership
+
+Disadvantages
+=============
+   1.Multiple VMs Lead to unstable performance
+   2.Hypervisors are not as efficient as a host os
+   3.Long Boot up process (Approximate 1 minute)
+   4.This is using the host system resources
+   5.This is very critical in case of real time applications where fast processing is required. 
+   6.scaling the no of vms is tedious and costly affiar
+
+
+Contairnerization
+==================
+Host os=>Container Engine=>(Bin& Lib, Bin & Lib 2.....) =>(App1,App2)
+
+1.Contairnerization is Just Virtualization at OS Level
+2.Contairnerization is also a type of Virtualization.
+3.It is more efficient as there is no guest os.
+4.Binaries and Libraries of the containers are on the host kernel which makes processing and execution very fast
+5.Even Booting takes fraction of second. 
+
+ 
+
+ Virtualization brings the abstraction at h/w where as Contairnerization brings abstraction to software
+
+   Advantages
+   ==========
+	1.Containers on same os kernel are lighter and smaller
+	2.Better Resource utilization Compared to VMS
+	3.Short Boot up process (1/20th of second )
+
+
+
+Which of the below option is incorrect ?
+
+1. Contairnerization  is replacing Virtualization 
+2. Contairnerization brings process level isolation
+3. Hypervisors Manage the VMS.
+
+
+
+What is Docker ?
+==============
+Docker is a Contairnerization  platform which packages your application and all its dependencies together in the form of containers
+so as to ensure that your application works seamlessly in any environment be it Dev/Test/Prod
+
+Host Os=>Docker Engine=> (App1[bin & lib],App2[bin & lib])=>(container1 ,container2)
+
+The no of system scaled up easily.
+
+=============================================================
+        VMS                                Dockers
+=============================================================
+
+        Elephants           Size           Rabbit
+
+        Tortoise           Speed           Chita
+
+	No integration     Integration     comfortably integrated with Devops tools fo automating the manual process.
+
+              
+
+Resource and Memory Utilization
+======================================
+
+
+Host os 16 GB Ram
+==================
+         In Case of virtual Macine
+         =============================
+
+     Allocation =>  VMs    => Memory Used    =>  Memory Un used
+        6 GB    =>  VM 1   =>   4 GB         =>  2 GB
+        4 GB    =>  VM 2   =>   1 GB         =>  3 GB
+        6 GB    =>  VM 3   =>   2 GB         =>  2 GB
+==========================================================
+       16 GB                   9 GB              7 GB
+
+7  GB RAM is blocked
+7  GB RAM cannot be alloted to new vm.
+
+
+  
+
+Host os 16 GB Ram
+==================
+         In Case of Docker
+         =============================
+
+     Allocation =>  Docker       => Memory Used    
+                =>  Container1   =>   4 GB         
+                =>  Container2   =>   1 GB         
+                =>  Container3   =>   2 GB         
+==========================================================
+       16 GB                         9 GB             7 GB
+
+
+No Ram is allocated for unused
+7  GB RAM is unused 
+7  GB RAM can be alloted to new containerization.
+
+
+Building and deployment 
+===============================
+
+In case of VMs
+             New Builds=>Multiple Guest OS =>Separate Libraries =>Heavy=>More Time
+
+In case of Docker
+
+             New Builds=>Same Host OS =>Separate Libraries =>Light Weight  => Less Time
+
+
+
+Integration
+=============
+In case of Vms Integration is possible but costly due to infrastructur requirement and not easily scalable.
+
+In case of Docker Integration is Faster,Cheap and scalable.
+
+
+
+
+Q.Which of the follwing option is correct w.r.t creating Docker containers. ?
+================================================================================
+
+1.I can build my own image and use it for creating a Docker container. T
+ 
+2.I can pull the image from Docker hub and then run the Docker image. T
+ 
+3.I can create a Docker container without Docker image. F
+
+Docker containers can be created by executing the docker image hence it is not possible to run a container without building the image.
+
+
+Q.Where does the Docker daemon stores the Docker images?
+
+1.Docker Client
+2.Docker Host
+3.Docker Registry
+
+
+All the docker images are stored  in the Docker registry which can be either local repository or a remote Docker hub.
+
+
+
+
+Docker File Spring Boot Java Application
+================================================
+FROM openjdk:8
+ADD target/docker-spring-boot.jar docker-spring-boot.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","docker-spring-boot.jar"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Question
+=========
+Suppose I have a System with 4 GB RAM and I want to run 4 instances of particular Devops tool 
+then which of the below is the best choice?
+
+1. 4 VMS with 4 different instances of that tool
+2. 1 VM  with 4 different instances of that tool
+3. 4 Docker containers with different instances of that tool
+ 
+
+port forwardization
+========================
+docker run --name pc-mysql2 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql
+
+
+
+docker run -td --name webserver -p 80:80 ubuntu 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
