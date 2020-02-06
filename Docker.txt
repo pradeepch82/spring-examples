@@ -1,19 +1,6 @@
-Docker Training Details  :
-=======================
 
-              Training Time :  10:15 PM  IST
-
-
-External Users dial
-======================
-US:  +1-919-948-2233 or +1-919-719-5708    Passcode : 676259 
-Erope : +48-123-232-560                       
-
-Offshore via Mobile :
-========================
-Please dial : 0-22-67874110 or +91-2241137602   :Passcode: 023293
-
-
+Docker Training   ( 9 hours)
+================
 
 1.Difference between virtulization and containerization
 2.What is Docker?
@@ -83,19 +70,19 @@ Basic
 : docker --help
 : docker login
 
-————————————
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 Images
 : docker images
 : docker pull
 : docker rmi
-————————————
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 Containers
 : docker ps
 : docker run
 : docker start -i <container-name>
 : docker stop
 : docker logs
-————————————
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 System
 : docker stats
 : docker system df
@@ -113,17 +100,41 @@ Downloading the Latest MongoDB Docker Image
 Deploying an Instance of MongoDB as a Container
 ====================================================
    Syntax : docker run --name <alias-name> <image-name>:tag
+   Syntax : docker run --name <alias-name> -p 3456:27017 <image-name>:tag
 
-   Example : docker run --name mongodb mongo:4.0.4 
-
+   Example : docker run --name mongodb -d mongo:4.0.4 
+             docker run --name mongodb -p 1212:27017 -d mongo:4.0.4   
 
 
 Interacting with the MongoDB Docker Container with Basic Shell Operations
 ==========================================================================
 
-  Syntax :docker exec -it <image-name> bash 
+  Syntax :docker exec -it <container-name> bash 
 
   Example : docker exec -it mongodb bash
+
+
+Creating the custom image and pusing it to the docker hub
+=============================================================
+
+docker run --name pc-centos -it centos bash
+
+root@123333# mkdir one two three
+
+root@123333# touch a.txt b.txt c.txt
+
+root@123333# echo "HEllo World" > hello.txt
+
+docker commit -a "Pradeep Chinchole" -m "Added files and folder" pc-centos pradeepch82/pc-centos:1.1
+
+docker images
+
+docker login
+  login id :pradeepch82
+  password :Sony@1989
+ 
+docker push pradeepch82/pc-centos:1.1
+
 
 
 
@@ -149,8 +160,8 @@ Can be stored locally or remote
 : docker pull image
 : docker images
 : docker images -q
-: docker images -f “dangling=false”
-: docker images -f “dangling=false” -q
+: docker images -f â€œdangling=falseâ€
+: docker images -f â€œdangling=falseâ€ -q
 
 : docker run image
 : docker rmi image
@@ -182,7 +193,7 @@ COMMANDS
 : docker pause ContainerName/ID
 : docker unpause  ContainerName/ID
 
-: docker top ContainerName/ID
+: docker stop ContainerName/ID
 : docker stats ContainerName/ID
 
 : docker attach ContainerName/ID
@@ -231,7 +242,6 @@ RUN
 CMD
 
 
-
 Step 1 : Create a file named Dockerfile
 
 Step 2 : Add instructions in Dockerfile
@@ -240,17 +250,18 @@ Step 3 : Build dockerfile to create image
 
 Step 4 : Run image to create container
 
-
 Example  :Dockerfile
 
 FROM ubuntu
 MAINTAINER Pradeep Chinchole <pradeepch82@gmail.com>
-RUN apt-get-update
+RUN apt-get update
+CMD ["echo", "Hello World..! from my first docker iamge"]
+CMD ["echo", "Hello World..! from my first docker iamge"]
+CMD ["echo", "Hello World..! from my first docker iamge"]
 CMD ["echo", "Hello World..! from my first docker iamge"]
 
-
 COMMANDS
-: docker build 
+: docker build directoryOfDocekrfile
 : docker build -t ImageName:Tag directoryOfDocekrfile
 : docker run image
 
@@ -321,7 +332,7 @@ Steps 5 : Bring down application by command
 TIPS
 How to scale services
 
-—scale
+â€”scale
 docker-compose up -d --scale database=4
  
 
@@ -386,9 +397,9 @@ NOTES
 
 By default all files created inside a container are stored on a writable container layer
 
-The data doesn’t persist when that container is no longer running
+The data doesnâ€™t persist when that container is no longer running
 
-A container’s writable layer is tightly coupled to the host machine where the container is running. You can’t easily move the data somewhere else.
+A containerâ€™s writable layer is tightly coupled to the host machine where the container is running. You canâ€™t easily move the data somewhere else.
 
 Docker has two options for containers to store files in the host machine
 so that the files are persisted even after the container stops
