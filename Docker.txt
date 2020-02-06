@@ -239,7 +239,9 @@ Automation of Docker Image Creation
 FROM 
 MAINTAINER 
 RUN
+ENTRYPOINT
 CMD
+
 
 
 Step 1 : Create a file named Dockerfile
@@ -263,8 +265,38 @@ CMD ["echo", "Hello World..! from my first docker iamge"]
 COMMANDS
 : docker build directoryOfDocekrfile
 : docker build -t ImageName:Tag directoryOfDocekrfile
-: docker run image
+: docker run imageid 
 
+
+Docker File Spring Boot Java Application
+================================================
+FROM openjdk:8
+ADD target/docker-spring-boot.jar docker-spring-boot.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","docker-spring-boot.jar"]
+
+
+Docker file for MYSQL
+=======================
+# Derived from official mysql image (our base image)
+FROM mysql
+# Add a database
+ENV MYSQL_DATABASE company
+ENV MYSQL_ROOT_PASSWORD admin
+# Add the content of the sql-scripts/ directory to your image
+# All scripts in docker-entrypoint-initdb.d/ are automatically
+# executed during container startup
+ADD script.sql /docker-entrypoint-initdb.d/
+CMD ["echo","MySQL database set up properly "]
+
+script.sql
+===========
+use company;
+create table employee(id int primary key,name text,salary double);
+insert into employee values(101,'RAM',10000.00);
+insert into employee values(102,'RAHIM',20000.00);
+insert into employee values(103,'DAVID',30000.00);
+insert into employee values(104,'PRADEEP',40000.00);
 
 
 References:
@@ -441,9 +473,6 @@ insert into employees values(103,'Pranam',10000);
 
 
 
-
-
-
 Linking Docker containers with Links
 ===========================================
 
@@ -471,22 +500,6 @@ docker run -p 1122:8080 --name docker-ems-mysql --link mysql-standalone:mysql -d
 docker pull wordpress
 
 docker run --name pcwordpress --link pc-mysql:mysql -p 8080:80 -d wordpress
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -656,18 +669,6 @@ All the docker images are stored  in the Docker registry which can be either loc
 
 
 
-Docker File Spring Boot Java Application
-================================================
-FROM openjdk:8
-ADD target/docker-spring-boot.jar docker-spring-boot.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","docker-spring-boot.jar"]
-
-
-
-
-
-
 
 
 
@@ -693,40 +694,6 @@ docker run --name pc-mysql2 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql
 
 
 docker run -td --name webserver -p 80:80 ubuntu 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
 
 
 
