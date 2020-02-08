@@ -283,11 +283,13 @@ FROM mysql
 # Add a database
 ENV MYSQL_DATABASE company
 ENV MYSQL_ROOT_PASSWORD admin
+ENV MYSQL_USER pradeep
+ENV MYSQL_PASSWORD pradeep
 # Add the content of the sql-scripts/ directory to your image
 # All scripts in docker-entrypoint-initdb.d/ are automatically
 # executed during container startup
 ADD script.sql /docker-entrypoint-initdb.d/
-CMD ["echo","MySQL database set up properly "]
+
 
 script.sql
 ===========
@@ -297,6 +299,7 @@ insert into employee values(101,'RAM',10000.00);
 insert into employee values(102,'RAHIM',20000.00);
 insert into employee values(103,'DAVID',30000.00);
 insert into employee values(104,'PRADEEP',40000.00);
+
 
 
 References:
@@ -398,11 +401,38 @@ On deleting container volume does not delete
 
 Commands
 
+docker volume create myvol1
+
 docker run --name MyJenkins1 -v myvol1:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins
 
 docker run --name MyJenkins2 -v myvol1:/var/jenkins_home -p 9090:8080 -p 60000:50000 jenkins
 
 docker run --name MyJenkins3 -v /Users/raghav/Desktop/Jenkins_Home:/var/jenkins_home -p 9191:8080 -p 40000:50000 jenkins
+
+
+========================
+
+docker volume create mysql-vol
+
+docker run --name a-mysql -v mysql-vol:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin
+ -p 1321:3306 mysql:5.6
+
+docker run --name b-mysql -v mysql-vol:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin -p 2323:3306 mysql:5.6
+
+
+docker exec -it a-mysql bash
+mysql -uroot -padmin 
+
+docker exec -it b-mysql bash
+mysql -uroot -padmin 
+
+
+
+
+
+
+
+
 
 
 
