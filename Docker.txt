@@ -276,6 +276,16 @@ EXPOSE 8080
 ENTRYPOINT ["java","-jar","docker-spring-boot.jar"]
 
 
+======>
+
+docker build -t pradeepch82/spring-dokcer-demo:1.1 .
+
+docker login
+
+docker push pradeepch82/spring-docker-demo:1.1
+
+
+
 Docker file for MYSQL
 =======================
 # Derived from official mysql image (our base image)
