@@ -200,16 +200,76 @@ Companys : Netflix,Thomson Reuters ,Airbnb
 
 
 
+Database Service
+==================
+
+RDBMS   =>ACID
+=======
+Oracle
+MySQL
+DB2
+SQL Server
+MariaDB
+Aurora
+
+NOSQL : 
+==============
+Consistency 
+
+       Weak Consistency
+       Eventual Consistency
+       Strong Consistency
+
+Availability 
+             24/7
+Partition tolernece
+
+CP ->Hbase,MongoDB
+AP ->Apache casendra
+CA ->RDBMS
 
 
 
-Databases
-=========
+NOSQL Databse models
+======================
+1.Key value         
+
+2.column family     :Hbase ,Casendra  =>cf:cq:value
+
+1 Table             : N Column Family
+1 Column  Family    : N Column qualifiers
+1 Column qualifier : 1 Value
+
+      Table employee
+      ==============
+       id    name     salary   flatNo   bldName area       city  
+       101   pradeep  1000     101      A4      shivane    Pune
+
+Column Family     
+                   employee_personal_info
+                    
+Column qualifier  :id    name     salary
+Column Value       101   pradeep  1000     
+ 
+
+Column Family     
+                   employee_address
+
+Column qualifier  :flatNo   bldName    area       city  
+Column Value        101      A4       Shivane      Pune   
+
+3.document oriented :MongoDB        
+
+   {id:101,name:'Pradeep Chinchole',salary:12000}
+
+4.graph storage     : Neo4j
 
 
+Amazon DynamoDB
+================
+Amazon DynamoDB is a fast and flexible NOSQL database service for all apllications that need consistent,single digit millisecond latency at any scale.It is fully manged databse and supports both document and key value data models.It's a flexible data model and reliable performance make it great fit for mobile,web gaming,IOT and many other serverless applications.
 
 Serverless
-
 
 Stored on SSD(solid state disk) storage
 Spread across 3 geographically distinct data centers
