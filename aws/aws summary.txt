@@ -48,8 +48,6 @@ Inline policy can only be attached to a single user ,group or role.State Tre or 
 Inline policy is deleted if the associated user user ,group or role is deleted.State True or False
 
 
-
-
 You are a developer for a genomics firm that is moving its infrastructure to AWS. Their environment consists of a three-tier web application, a web tier, an application tier and a relational database tier. They have a separate fleet of virtual machines that are used to access large HPC clusters on the fly. Their lab researches run multiple projects simultaneously and they will need to launch and decommission 1,000's of nodes on-demand while reducing the time required to complete genomic sequencing from weeks to days. In order to stay competitive they need to do this at as low cost as possible, with no long-term contracts. These HPC clusters can run any time day or night and their workloads store information in S3, so the instances can be terminated at any time without any effect on the data. What is the most COST EFFECTIVE EC2 pricing model for their requirements?
 
 
@@ -95,19 +93,10 @@ Which statement best describes IAM?
 
 
 
-
-
-
-
-
-
 What is an IAM Policy?
 
 
-
 Which IAM entity can you use to delegate access to your AWS resources to users, groups or services?
-
-
 
 
 Which of the following is NOT a feature of IAM?
@@ -145,6 +134,8 @@ S3 Service
 Its a Object Storage ,unlimited storage
 It's a Key value store
 
+
+
 S3 is a Object based consists of follwoing
 Key (This is simply name of the object)
 Value (This is simply the data which is simply made up of bytes)
@@ -155,7 +146,7 @@ Sub resource-bucket specific configration
   2.Cross Origin Resource sharing
   3.Transfer Acceleration
 
-Built for 99.99$ availabilty for the s3 platform
+Built for 99.99 availabilty for the s3 platform
 Amazon gurantee 99.9 avialability
 Amazon gurantee 99.999999999% durability (11*9)
    Amount of data expect to loose over giving year
@@ -177,7 +168,6 @@ Storage Class
   In frequently access 
   Reduce Redudancy Storage -1 copy  
   AWS S3 Glacier (archive data)
-
 
 S3 Data consistency
 ====================
@@ -267,6 +257,14 @@ Column Value        101      A4       Shivane      Pune
 
 Amazon DynamoDB
 ================
+
+Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multiregion, multimaster, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. DynamoDB can handle more than 10 trillion requests per day and can support peaks of more than 20 million requests per second.
+
+
+Hundreds of thousands of AWS customers have chosen DynamoDB as their key-value and document database for mobile, web, gaming, ad tech, IoT, and other applications that need low-latency data access at any scale. Create a new table for your application and let DynamoDB handle the rest.
+
+
+
 Amazon DynamoDB is a fast and flexible NOSQL database service for all apllications that need consistent,single digit millisecond latency at any scale.It is fully manged databse and supports both document and key value data models.It's a flexible data model and reliable performance make it great fit for mobile,web gaming,IOT and many other serverless applications.
 
 Serverless
@@ -287,7 +285,7 @@ Tables
 
 
 DynamoDB stores and retrieves the data based on primary key
- 2 types of primary key
+ 2  types of primary key
   1. Partition Key -unique attribute (userid/employee id)
    Value of the partition key is input to an internal hash function which determines 
    the partition or physical location oon which data is stored.
@@ -442,6 +440,7 @@ Eventual Consistent read calculation
 DynamoDB :On Demand capacity
 
 Charges apply for reading,writing and storing data
+
 With On-demand,you don't need to specify your requirements
 DynamoDB instantly scales up and down based on the activity of your application
 Great for unpredictable loads
@@ -489,6 +488,7 @@ May be able to reduce Provisioned Read Capacity
 What is Not Suitable For?
 
 Caters for Eventually Consistetn reads only-
+
 so not suitable for applications that require Strongly Consistent reads
 
 Write intensive applications
@@ -502,6 +502,13 @@ You point your API calls to the DAX cluster instead of your table
 =========================================================
 
 
+Amazon Kinesis
+================
+Easily collect, process, and analyze video and data streams in real time
+
+
+Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information.Amazon Kinesis offers key capabilities to cost-effectively process streaming data at any scale, along with the flexibility to choose the tools that best suit the requirements of your application. With Amazon Kinesis, you can ingest real-time data such as video, audio, application logs, website clickstreams, and IoT telemetry data for machine learning, analytics, and other applications. Amazon Kinesis enables you to process and analyze data as it arrives and respond instantly instead of having to wait until all your data is collected before the processing can begin.
+
 
 Kenesis
 =======
@@ -511,7 +518,7 @@ Kenesis
  Data Streams :
     Build Custom application process data in real time
 
-2.Kinesis Firebase-capture
+2.Kinesis Firehose-
     Capture,transform,load streams into AWS data store for near real time analytics with BI tools
 
 You can configure Lamda to subscribe to a kenesis stream and execute a function on be your half when a new record is detected before sending the processed data on to its final destination
@@ -594,14 +601,17 @@ SQS
    Pull based not push based
    Messages are 256 KB in size
    Messages can be kept in the queue from 1 minute to 14 days
-   Default retention period is 4 days
-   SQS guarentees that your messages will be processed at least
+   Default retention period is 14 days
+   SQS guarentees that your messages will be processed at least once
 
 
 
 
 
-Standard queues(default) best effort ordering message    delivered at least once
+Standard queues(default) provides best effort ordering message and  delivered at least once.
+
+
+
 
 FIFO queues  ordering strictly preserved message delevered once
 no duplicates (good for banking transactions which need to happen in strict order)
@@ -610,6 +620,13 @@ Visibility timeout
     Amount of time that the message is invisible in the SQS
     after reader picks up that message.Provided the job is   processd before visibility timeout expires the message will 
   be deleted from the queue.If job is not processed within that time the message will become visible again and another reader will process it.This could result in the same message being delivered twice.
+
+
+To prevent other consumers from processing the message again, Amazon SQS sets a visibility timeout, a period of time during which Amazon SQS prevents other consumers from receiving and processing the message. The default visibility timeout for a message is 30 seconds. The minimum is 0 seconds. The maximum is 12 hours.
+
+
+
+
 
 
     Default 30 second 
@@ -650,7 +667,7 @@ A variety of message formats are supported
    Amazon SQS queues
    any http end point
 Pub-Sub model where by users subscribe to topic
-It is apush mechanisam rather than pull mechanism
+It is a push mechanisam rather than pull mechanism
 
 
 Example architecture :
@@ -688,6 +705,33 @@ You can fan out messages to large number of recipents
 (eg. multiple clients each with their own SQS queue)
   
   
+Elastic Load Balancing
+=============================
+Achieve fault tolerance for any application by ensuring scalability, performance, and security.
+
+
+
+Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions. It can handle the varying load of your application traffic in a single Availability Zone or across multiple Availability Zones. Elastic Load Balancing offers three types of load balancers that all feature the high availability, automatic scaling, and robust security necessary to make your applications fault tolerant.
+
+
+
+Application Load Balancer
+============================
+Application Load Balancer is best suited for load balancing of HTTP and HTTPS traffic and provides advanced request routing targeted at the delivery of modern application architectures, including microservices and containers. Operating at the individual request level (Layer 7), Application Load Balancer routes traffic to targets within Amazon Virtual Private Cloud (Amazon VPC) based on the content of the request.
+
+
+Network Load Balancer
+======================
+Network Load Balancer is best suited for load balancing of Transmission Control Protocol (TCP), User Datagram Protocol (UDP) and Transport Layer Security (TLS) traffic where extreme performance is required. Operating at the connection level (Layer 4), Network Load Balancer routes traffic to targets within Amazon Virtual Private Cloud (Amazon VPC) and is capable of handling millions of requests per second while maintaining ultra-low latencies. Network Load Balancer is also optimized to handle sudden and volatile traffic patterns.
+
+
+Classic Load Balancer
+=====================
+
+Classic Load Balancer provides basic load balancing across multiple Amazon EC2 instances and operates at both the request level and connection level. Classic Load Balancer is intended for applications that were built within the EC2-Classic network.
+
+
+
 
 
 
