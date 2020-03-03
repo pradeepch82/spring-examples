@@ -18,11 +18,14 @@ The whole idea of Docker is for developers to easily develop applications, ship 
 3.Features of Docker
 ====================
 
-=>Docker has the ability to reduce the size of development by providing a smaller footprint of the operating system via containers.
+=>Docker has the ability to reduce the size of development by providing a smaller footprint
+of the operating system via containers.
 
-=>With containers, it becomes easier for teams across different units, such as development, QA and Operations to work seamlessly across applications.
+=>With containers, it becomes easier for teams across different units, such as development, 
+QA and Operations to work seamlessly across applications.
 
-=>You can deploy Docker containers anywhere, on any physical and virtual machines and even on the cloud.
+=>You can deploy Docker containers anywhere, on any physical and virtual machines and even on
+the cloud.
 
 =>Since Docker containers are pretty lightweight, they are very easily scalable.
 
@@ -501,7 +504,8 @@ When you mount a volume, it may be named or anonymous.
 
 Anonymous volumes are not given an explicit name when they are first mounted into a container
 
-Volumes also support the use of volume drivers, which allow you to store your data on remote hosts or cloud providers, among other possibilities.
+Volumes also support the use of volume drivers, which allow you to store your data on remote
+hosts or cloud providers, among other possibilities.
 
 
 create database company;
@@ -516,7 +520,8 @@ insert into employees values(103,'Pranam',10000);
 Linking Docker containers with Links
 ===========================================
 
-Links allow the containers to discover each other and securely transfer the information about one container to another container.
+Links allow the containers to discover each other and securely transfer the information
+about one container to another container.
 
 Syntax
 =======
@@ -569,7 +574,8 @@ Disadvantages
    2.Hypervisors are not as efficient as a host os
    3.Long Boot up process (Approximate 1 minute)
    4.This is using the host system resources
-   5.This is very critical in case of real time applications where fast processing is required. 
+   5.This is very critical in case of real time applications
+   where fast processing is required. 
    6.scaling the no of vms is tedious and costly affiar
 
 
@@ -605,8 +611,10 @@ Which of the below option is incorrect ?
 
 What is Docker ?
 ==============
-Docker is a Contairnerization  platform which packages your application and all its dependencies together in the form of containers
-so as to ensure that your application works seamlessly in any environment be it Dev/Test/Prod
+Docker is a Contairnerization  platform which packages your 
+application and all its dependencies together in the form of containers
+so as to ensure that your application works seamlessly in any environment 
+be it Dev/Test/Prod
 
 Host Os=>Docker Engine=> (App1[bin & lib],App2[bin & lib])=>(container1 ,container2)
 
@@ -678,7 +686,8 @@ In case of Docker
 
 Integration
 =============
-In case of Vms Integration is possible but costly due to infrastructur requirement and not easily scalable.
+In case of Vms Integration is possible but costly due to infrastructur requirement
+and not easily scalable.
 
 In case of Docker Integration is Faster,Cheap and scalable.
 
@@ -704,7 +713,8 @@ Q.Where does the Docker daemon stores the Docker images?
 3.Docker Registry
 
 
-All the docker images are stored  in the Docker registry which can be either local repository or a remote Docker hub.
+All the docker images are stored  in the Docker registry which can be either
+local repository or a remote Docker hub.
 
 
 
