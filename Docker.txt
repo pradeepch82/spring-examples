@@ -69,6 +69,7 @@ Docker Basic Commands
 Basic
 : docker version
 : docker -v 
+: docker --version 
 : docker info
 : docker --help
 : docker login
@@ -80,11 +81,13 @@ Images
 : docker rmi
 ————————————
 Containers
-: docker ps
-: docker run
+: docker ps  (shows only running cotainers (use -a for show all containers))
+: docker rm  <container-name> 
+: docker run <image-name>
 : docker start -i <container-name>
-: docker stop
-: docker logs
+: docker stop <container-name>
+: docker logs <container-name>
+: docker exec -it <container-name> bash
 ————————————
 System
 : docker stats
@@ -93,6 +96,26 @@ System
 
 
 
+day1
+====
+Practice below commands
+========================
+
+   docker run hello-world 
+  
+   docker run --name p-ubuntu -it ubuntu bash
+   
+   docker start p-ubuntu
+   
+   docker exec -it p-ubuntu bash
+   
+   docker run --name p-mysql -e MYSQL_ROOT_PASSWORD=admin -d mysql:5.6
+   
+   docker exec -it p-mysql bash
+   
+   mysql -uroot -padmin
+   
+  
 Downloading the Latest MongoDB Docker Image
 ===========================================
    Syntax : docker pull <image-name>  or docker pull <image-name>:<tag>
