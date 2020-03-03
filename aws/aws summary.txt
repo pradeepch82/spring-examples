@@ -11,23 +11,28 @@ With AWS, organizations pay only for what they use, without up-front or long-ter
 
 Which of the following are Cloud Compute Services offered by Amazon?
 
-Which  AWS service allows you to run functions in the cloud and is a big cost saver for you as you to pay only when your functions execute?
+Which  AWS service allows you to run functions in the cloud and is a big cost saver for you as you
+to pay only when your functions execute?
 
-_______________ is a software appliance that seamlessly links your on-premises environment to Amazon cloud storage.
+_______________ is a software appliance that seamlessly links your on-premises environment to
+Amazon cloud storage.
 
-______________________provides a simple, scalable, elastic file system for Linux-based workloads for use with AWS Cloud services 
+______________________provides a simple, scalable, elastic file system for Linux-based workloads for
+use with AWS Cloud services 
 
 ____________ is object storage designed to store and access any type of data over the Internet.
 
 ______________ Store and process block data on persistent volumes for Amazon EC2 instances 
 
-________________are secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup.
+________________are secure, durable, and extremely low-cost Amazon S3 cloud storage classes for
+data archiving and long-term backup.
 
-______________________ lets you provision a logically isolated section of the AWS Cloud where you can launch AWS 
+______________________ lets you provision a logically isolated section of the AWS Cloud where
+you can launch AWS 
 resources in a virtual network that you define
 
-_____________ is a secure cloud security service which helps you to manage users, assign policies, form groups
-to manage multiple users
+_____________ is a secure cloud security service which helps you to manage users, assign policies,
+form groups to manage multiple users
 
 Using AWS Identity and Access Management (IAM) , you can create and manage AWS users and groups, 
 and use permissions to allow and deny their access to AWS resources.State True or False
@@ -523,7 +528,8 @@ before the processing can begin.
 Kenesis
 =======
 1. Kenesis Streams:
-     Video streams :securely stream video from connected devices to AWS for analytics and Machine learning
+     Video streams :securely stream video from connected devices to AWS for analytics
+     and Machine learning
  
  Data Streams :
     Build Custom application process data in real time
@@ -531,7 +537,8 @@ Kenesis
 2.Kinesis Firehose-
     Capture,transform,load streams into AWS data store for near real time analytics with BI tools
 
-You can configure Lamda to subscribe to a kenesis stream and execute a function on be your half when a new record is detected before sending the processed data on to its final destination
+You can configure Lamda to subscribe to a kenesis stream and execute a function on be your 
+half when a new record is detected before sending the processed data on to its final destination
 
 
 
