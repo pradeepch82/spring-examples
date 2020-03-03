@@ -13,7 +13,8 @@ Docker Training   ( 9 hours)
 =====================
 Docker is a container management service. 
 The keywords of Docker are develop, ship and run anywhere.
-The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
+The whole idea of Docker is for developers to easily develop applications,
+ship them into containers which can then be deployed anywhere.
 
 3.Features of Docker
 ====================
@@ -93,7 +94,6 @@ System
 : docker stats
 : docker system df
 : docker system prune (to stop all stoped containers)
-
 
 
 day1
@@ -234,7 +234,9 @@ COMMANDS
 What is a Container ?
 =====================
 
-A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings.
+A container image is a lightweight, stand-alone, executable package of a piece of 
+software that includes everything needed to run it: code, runtime, system tools, 
+system libraries, settings.
 
 Features of Containers:
 ======================
@@ -243,7 +245,8 @@ Features of Containers:
 =>Booting of containers is very fast
 =>Can start, stop, kill, remove containers easily and quickly
 =>Operating System resources can be shared within Docker
-=>Containers run on the same machine sharing the same Operating system Kernel, this makes it faster
+=>Containers run on the same machine sharing the same Operating system Kernel,
+this makes it faster
 =>You can use the command docker start container to start container in stopped state
 
 
@@ -726,7 +729,8 @@ Q.Which of the follwing option is correct w.r.t creating Docker containers. ?
  
 3.I can create a Docker container without Docker image. F
 
-Docker containers can be created by executing the docker image hence it is not possible to run a container without building the image.
+Docker containers can be created by executing the docker image hence it is not 
+possible to run a container without building the image.
 
 
 Q.Where does the Docker daemon stores the Docker images?
