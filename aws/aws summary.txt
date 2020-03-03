@@ -1,7 +1,10 @@
-Amazon web service is a platform that offers flexible, reliable, scalable, easy-to-use and costeffective cloud computing solutions.State True or False
+Amazon web service is a platform that offers flexible, reliable, scalable, easy-to-use and 
+costeffective cloud computing solutions.State True or False
 
 
-Using AWS, you can requisition compute power, storage, and other services in minutes and have the flexibility to choose the development platform or programming model that makes the most sense for the problems they’re trying to solve.State True or False
+Using AWS, you can requisition compute power, storage, and other services in minutes and have the
+flexibility to choose the development platform or programming model that makes the most sense for the
+problems they’re trying to solve.State True or False
 
 
 With AWS, organizations pay only for what they use, without up-front or long-term commitments. 
@@ -20,11 +23,14 @@ ______________ Store and process block data on persistent volumes for Amazon EC2
 
 ________________are secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup.
 
-______________________ lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define
+______________________ lets you provision a logically isolated section of the AWS Cloud where you can launch AWS 
+resources in a virtual network that you define
 
-_____________ is a secure cloud security service which helps you to manage users, assign policies, form groups to manage multiple users
+_____________ is a secure cloud security service which helps you to manage users, assign policies, form groups
+to manage multiple users
 
-Using AWS Identity and Access Management (IAM) , you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.State True or False
+Using AWS Identity and Access Management (IAM) , you can create and manage AWS users and groups, 
+and use permissions to allow and deny their access to AWS resources.State True or False
 
 There is a hard limit on how much data you can store on S3.State True or False
 
@@ -39,7 +45,8 @@ _____________ is easy to set up, operate, and scale a relational database in the
 
 ___________ is a web service which makes it easy to deploy, operate, and scale an in-memory cache in the cloud. 
 
- _____________ is a fast, fully managed NoSQL database service which allow cost-effective storage and retrieval of data and  allows you to serve any level of request traffic. 
+ _____________ is a fast, fully managed NoSQL database service which allow cost-effective storage and retrieval 
+ of data and  allows you to serve any level of request traffic. 
 
 What is the default region for all SDKs?
 
@@ -48,32 +55,19 @@ Inline policy can only be attached to a single user ,group or role.State Tre or 
 Inline policy is deleted if the associated user user ,group or role is deleted.State True or False
 
 
-You are a developer for a genomics firm that is moving its infrastructure to AWS. Their environment consists of a three-tier web application, a web tier, an application tier and a relational database tier. They have a separate fleet of virtual machines that are used to access large HPC clusters on the fly. Their lab researches run multiple projects simultaneously and they will need to launch and decommission 1,000's of nodes on-demand while reducing the time required to complete genomic sequencing from weeks to days. In order to stay competitive they need to do this at as low cost as possible, with no long-term contracts. These HPC clusters can run any time day or night and their workloads store information in S3, so the instances can be terminated at any time without any effect on the data. What is the most COST EFFECTIVE EC2 pricing model for their requirements?
-
-
-
-
-
-
-
-
-
-
-
+You are a developer for a genomics firm that is moving its infrastructure to AWS. Their environment 
+consists of a three-tier web application, a web tier, an application tier and a relational database tier.
+They have a separate fleet of virtual machines that are used to access large HPC clusters on the fly. 
+Their lab researches run multiple projects simultaneously and they will need to launch and 
+decommission 1,000's of nodes on-demand while reducing the time required to complete genomic sequencing 
+from weeks to days. In order to stay competitive they need to do this at as low cost as possible, 
+with no long-term contracts. These HPC clusters can run any time day or night and their workloads
+store information in S3, so the instances can be terminated at any time without any effect on the data.
+What is the most COST EFFECTIVE EC2 pricing model for their requirements?
 
 
 
 You run the internal intranet for a corporate bank. The intranet consists of a number of webservers and single relational database running Microsoft SQL Server. Your peak demand occurs at 9am every week morning when users are first logging in to the intranet. They can only log in using the company's internal network and it is not possible to access the intranet from any location other than within the office building for security purposes. Management is considering a change and to move this environment to AWS where users will be able to access the intranet via a software VPN. You have been asked to evaluate a migration to AWS and to identify the best EC2 billing model for your company's intranet. You must keep costs low and to be able to scale at particular times of day. You must maintain availability of the intranet throughout office hours. Management do not want to be locked into any contracts in case for some reason they want to go back to hosting internally. What EC2 billing model should you recommend?
-
-
-
-
-
-
-
-
-
-
 
 
 You are the IT manager at a furniture retailer and they are considering moving their web application to AWS. They currently colocate their servers in a colocation facility and the contract for this facility is now coming to an end. Management are comfortable signing a 3 year contract and want to get the cheapest web servers as possible while still maintaining availability. Their traffic is very steady and predictable. What EC2 pricing model would you recommend to maintain availability and to get the lowest cost price available?
@@ -81,17 +75,7 @@ You are the IT manager at a furniture retailer and they are considering moving t
 =======================================
 
 
-
-
-
-
-
-
-
-
 Which statement best describes IAM?
-
-
 
 What is an IAM Policy?
 
@@ -111,7 +95,9 @@ You have a list of email addresses to which you need to push emails on a periodi
 
 Which  AWS service is used to deploy and manage the web applications?
 
-With EC2, you can have 2 types of storage: EBS or Instance Store. EBS is persistent,and if an EC2 instance is stopped with an EBS volume attached, there will be no data lost.Instance Store is ephemeral and if the EC2 instance is stopped, all data will be lost.State True or False
+With EC2, you can have 2 types of storage: EBS or Instance Store. EBS is persistent,and if an EC2
+instance is stopped with an EBS volume attached, there will be no data lost.Instance Store is 
+ephemeral and if the EC2 instance is stopped, all data will be lost.State True or False
 Which of the following database services are provided by AWS?
 Which of the following thing can do using IAM?
 
@@ -258,14 +244,23 @@ Column Value        101      A4       Shivane      Pune
 Amazon DynamoDB
 ================
 
-Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multiregion, multimaster, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. DynamoDB can handle more than 10 trillion requests per day and can support peaks of more than 20 million requests per second.
+Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond 
+performance at any scale. It's a fully managed, multiregion, multimaster, durable database
+with built-in security, backup and restore, and in-memory caching for internet-scale applications.
+DynamoDB can handle more than 10 trillion requests per day and can support peaks 
+of more than 20 million requests per second.
 
 
-Hundreds of thousands of AWS customers have chosen DynamoDB as their key-value and document database for mobile, web, gaming, ad tech, IoT, and other applications that need low-latency data access at any scale. Create a new table for your application and let DynamoDB handle the rest.
+Hundreds of thousands of AWS customers have chosen DynamoDB as their key-value and document
+database for mobile,web, gaming, ad tech, IoT, and other applications that need low-latency
+data access at any scale. Create a new table for your application and let DynamoDB handle the rest.
 
 
 
-Amazon DynamoDB is a fast and flexible NOSQL database service for all apllications that need consistent,single digit millisecond latency at any scale.It is fully manged databse and supports both document and key value data models.It's a flexible data model and reliable performance make it great fit for mobile,web gaming,IOT and many other serverless applications.
+Amazon DynamoDB is a fast and flexible NOSQL database service for all apllications that
+need consistent,single digit millisecond latency at any scale.It is fully manged databse
+and supports both document and key value data models.It's a flexible data model and
+reliable performance make it great fit for mobile,web gaming,IOT and many other serverless applications.
 
 Serverless
 
@@ -314,17 +309,20 @@ You can also use special IAM Condition to restrict user access to only their own
 Imagine a mobile gaming application with millinos of users
 Users need to access the hig scores of each game ther are playing
 Access must be restricted to ensure they cannot view anyone else data
-This can be done by adding a condition to an IAM policy to allow only to items where the partiition  key value  matches userid     
+This can be done by adding a condition to an IAM policy to allow only to 
+items where the partiition  key value  matches userid     
         
 
 Fine grained access control using IAM condition parameter to 
-dynamodb:LeadingKeys to allow users to access only the items where the partiition  key value  matches userid     
+dynamodb:LeadingKeys to allow users to access only the items where the 
+partiition  key value  matches userid     
         
 
 Index
 =====
-In SQL databases an index is a data structure which allows you to perform fast queries on specific columns in a table.
-You select the columns that you want included in the index and run ur searches on the index- rather than on entire data set
+In SQL databases an index is a data structure which allows you to perform fast queries 
+on specific columns in a table.You select the columns that you want included in the index
+and run ur searches on the index- rather than on entire data set
  In DynamoDB 2 types of indexes are supported
    1.Local secondary Index
    2.Global secondary Index
@@ -357,15 +355,18 @@ Sort key :last login date
 
 Scan Vs Query API Call
 ========================
-A Query operation finds items in a table based on the Primary key attribute and distinct value to search for
+A Query operation finds items in a table based on the Primary key attribute and
+ distinct value to search for
 
-Eg. Select item where customer id is equal to 212 will select all the attributes of that item eg. first name and last name email
+Eg. Select item where customer id is equal to 212 will select all the attributes of that item eg.
+first name and last name email
 
 Use an optional sort key name and value to rfine the results
 
 if your sort key is timestamp you can refine query to select items with timestamp of last seve day
 
-By default Query returns all the attributes for the items bu you can use Projection Expression parameter if you want the query to only return the specific atributes you want
+By default Query returns all the attributes for the items bu you can use Projection Expression
+parameter if you want the query to only return the specific atributes you want
 
 Eg. If you only want to see the email adddress rather than all attributes
 
@@ -471,7 +472,8 @@ e.g
     auction applications,gaming and,sistes during black Friday promotions
 
 
-DAX is write-through caching service-this means data iswritten to the cache as well as the back end store at the same time
+DAX is write-through caching service-this means data iswritten to the cache as well as 
+the back end store at the same time
 
 Allows you point your DynamoDB API calls at the DAX cluster
 
@@ -507,7 +509,15 @@ Amazon Kinesis
 Easily collect, process, and analyze video and data streams in real time
 
 
-Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information.Amazon Kinesis offers key capabilities to cost-effectively process streaming data at any scale, along with the flexibility to choose the tools that best suit the requirements of your application. With Amazon Kinesis, you can ingest real-time data such as video, audio, application logs, website clickstreams, and IoT telemetry data for machine learning, analytics, and other applications. Amazon Kinesis enables you to process and analyze data as it arrives and respond instantly instead of having to wait until all your data is collected before the processing can begin.
+Amazon Kinesis makes it easy to collect, process, and analyze real-time, streaming
+data so you can get timely insights and react quickly to new information.
+Amazon Kinesis offers key capabilities to cost-effectively process streaming data at any scale, 
+along with the flexibility to choose the tools that best suit the requirements
+of your application. With Amazon Kinesis, you can ingest real-time data such as video,
+audio, application logs, website clickstreams, and IoT telemetry data for machine learning,
+analytics, and other applications. Amazon Kinesis enables you to process and analyze data as 
+it arrives and respond instantly instead of having to wait until all your data is collected 
+before the processing can begin.
 
 
 Kenesis
@@ -575,7 +585,8 @@ The files are written in YAML or JSON
 Files have a.config extension
 
 The .config files are saved to the .ebextensions folder
-Your .ebextensions folder must be located in the top level directory of your application source code bundle
+Your .ebextensions folder must be located in the top level directory of
+your application source code bundle
 
 Two different options for launching your RDS instance
 
@@ -618,15 +629,16 @@ no duplicates (good for banking transactions which need to happen in strict orde
 
 Visibility timeout
     Amount of time that the message is invisible in the SQS
-    after reader picks up that message.Provided the job is   processd before visibility timeout expires the message will 
-  be deleted from the queue.If job is not processed within that time the message will become visible again and another reader will process it.This could result in the same message being delivered twice.
+    after reader picks up that message.Provided the job is   processd before visibility timeout expires 
+    the message will be deleted from the queue.If job is not processed within that time the message
+    will become visible again and another reader will process it.This could result in the 
+    same message being delivered twice.
 
 
-To prevent other consumers from processing the message again, Amazon SQS sets a visibility timeout, a period of time during which Amazon SQS prevents other consumers from receiving and processing the message. The default visibility timeout for a message is 30 seconds. The minimum is 0 seconds. The maximum is 12 hours.
-
-
-
-
+To prevent other consumers from processing the message again, Amazon SQS sets a visibility timeout,
+a period of time during which Amazon SQS prevents other consumers from receiving and processing
+the message. The default visibility timeout for a message is 30 seconds. 
+The minimum is 0 seconds. The maximum is 12 hours.
 
 
     Default 30 second 
@@ -636,17 +648,20 @@ To prevent other consumers from processing the message again, Amazon SQS sets a 
 Short polling   : returned immediately even if no messages are in the queue
 ===============
 
-Long polling   : polls the queuue periodically and only returns response when message is ==============  in the queue or go the timeout is reached 
+Long polling   : polls the queuue periodically and only returns response when 
+               message is in the queue or go the timeout is reached 
 
 
 SNS
 ====
     Amazon SNS is web service that makes it easy to set up ,operate and send the notifications from the cloud.
 
-   It provides developers whith higly scalable,flexible and cost effective capability to publish the messages from and application and immediately deliver them to the subscribers or other applications.
+   It provides developers whith higly scalable,flexible and cost effective capability to publish the 
+   messages from and application and immediately deliver them to the subscribers or other applications.
 
  SNS notifincations can also trigger the lamda functions.
- Allows yo to group multiple recipients using topics.A topic is access point for allowing  reciepents to dynamically subscribe for identical copies of the same notiication
+ Allows yo to group multiple recipients using topics.A topic is access point for allowing  reciepents 
+ to dynamically subscribe for identical copies of the same notiication
  
  To prevent messages being lost all messages published to Amazon SNS are stored 
 redundantly across multiple availabilty zones.
@@ -659,7 +674,8 @@ redundantly across multiple availabilty zones.
    Inexpensive pay as you go model with no upfront cost
    Web based  AWS management console offers the simplicity of a point and click interface
 
-It is a scalable and highly available noification service which allows you to send push notifications from the cloud
+It is a scalable and highly available noification service which allows you to send
+push notifications from the cloud
 
 A variety of message formats are supported
    SMS text messages
@@ -711,24 +727,132 @@ Achieve fault tolerance for any application by ensuring scalability, performance
 
 
 
-Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions. It can handle the varying load of your application traffic in a single Availability Zone or across multiple Availability Zones. Elastic Load Balancing offers three types of load balancers that all feature the high availability, automatic scaling, and robust security necessary to make your applications fault tolerant.
+Elastic Load Balancing automatically distributes incoming application traffic 
+across multiple targets, such as Amazon EC2 instances, containers, IP addresses, 
+and Lambda functions.It can handle the varying load of your application traffic in
+a single Availability Zone or across multiple Availability Zones. Elastic Load Balancing 
+offers three types of load balancers that all feature the high availability, automatic 
+scaling, and robust security necessary to make your applications fault tolerant.
 
 
 
 Application Load Balancer
 ============================
-Application Load Balancer is best suited for load balancing of HTTP and HTTPS traffic and provides advanced request routing targeted at the delivery of modern application architectures, including microservices and containers. Operating at the individual request level (Layer 7), Application Load Balancer routes traffic to targets within Amazon Virtual Private Cloud (Amazon VPC) based on the content of the request.
+Application Load Balancer is best suited for load balancing of HTTP and HTTPS traffic and 
+provides advanced request routing targeted at the delivery of modern application architectures, 
+including microservices and containers. Operating at the individual request level (Layer 7),
+Application Load Balancer routes traffic to targets within Amazon Virtual Private Cloud (Amazon VPC) 
+based on the content of the request.
 
 
 Network Load Balancer
 ======================
-Network Load Balancer is best suited for load balancing of Transmission Control Protocol (TCP), User Datagram Protocol (UDP) and Transport Layer Security (TLS) traffic where extreme performance is required. Operating at the connection level (Layer 4), Network Load Balancer routes traffic to targets within Amazon Virtual Private Cloud (Amazon VPC) and is capable of handling millions of requests per second while maintaining ultra-low latencies. Network Load Balancer is also optimized to handle sudden and volatile traffic patterns.
+Network Load Balancer is best suited for load balancing of Transmission Control Protocol (TCP), 
+User Datagram Protocol (UDP) and Transport Layer Security (TLS) traffic where extreme performance 
+is required. Operating at the connection level (Layer 4), Network Load Balancer routes traffic
+to targets within Amazon Virtual Private Cloud (Amazon VPC) and is capable of handling millions 
+of requests per second while maintaining ultra-low latencies. Network Load Balancer is also 
+optimized to handle sudden and volatile traffic patterns.
 
 
 Classic Load Balancer
 =====================
 
-Classic Load Balancer provides basic load balancing across multiple Amazon EC2 instances and operates at both the request level and connection level. Classic Load Balancer is intended for applications that were built within the EC2-Classic network.
+Classic Load Balancer provides basic load balancing across multiple Amazon EC2 instances and
+operates at both the request level and connection level. Classic Load Balancer is intended 
+for applications that were built within the EC2-Classic network.
+
+
+Application Services
+=====================
+
+Step Function
+=============
+AWS Step Functions is a service provided by Amazon Web Services that makes it easier to orchestrate
+multiple AWS services to accomplish tasks. Step Functions allows you to create steps in a process where
+the output of one step becomes the input for another step, all using a visual workflow editor.
+
+Api Gateway
+==========
+Amazon API Gateway is a fully managed service that makes it easy for developers to create,
+publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for 
+applications to access data, business logic, or functionality from your backend services.
+Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time 
+two-way communication applications. API Gateway supports containerized and serverless 
+workloads, as well as web applications.
+
+API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands 
+of concurrent API calls, including traffic management, CORS support, authorization and access 
+control, throttling, monitoring, and API version management. API Gateway has no minimum fees
+or startup costs. You pay for the API calls you receive and the amount of data transferred out 
+and, with the API Gateway tiered pricing model, you can reduce your cost as your API usage scales.
+
+
+
+
+Simple Workflow
+================
+Amazon API Gateway is a fully managed service that makes it easy for developers to create, 
+publish, maintain,monitor, and secure APIs at any scale. APIs act as the "front door" for 
+applications to access data, business logic, or functionality from your backend services. 
+Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time
+two-way communication applications. API Gateway supports containerized and serverless
+workloads, as well as web applications.
+
+API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands
+of concurrent API calls, including traffic management, CORS support, authorization and access 
+control, throttling, monitoring, and API version management. API Gateway has no minimum fees
+or startup costs. You pay for the API calls you receive and the amount of data transferred 
+out and, with the API Gateway tiered pricing model, you can reduce your cost as your API 
+usage scales.
+
+
+Amazon SWF helps developers build, run, and scale background jobs that have parallel or sequential steps. 
+You can think of Amazon SWF as a fully-managed state tracker and task coordinator in the Cloud.
+
+If your app's steps take more than 500 milliseconds to complete, you need to track the state of processing,
+and you need to recover or retry if a task fails, Amazon SWF can help you.
+
+
+
+Elastic Transcoder
+==================
+Amazon Elastic Transcoder is media transcoding in the cloud. It is designed to be a highly scalable, 
+easy to use and a cost effective way for developers and businesses to convert (or “transcode”) media
+files from their source format into versions that will playback on devices like smartphones, tablets and PCs.
+
+
+Amazon Elastic Transcoder manages all aspects of the media transcoding process for you transparently 
+and automatically. There’s no need to administer software, scale hardware, tune performance, or otherwise 
+manage transcoding infrastructure. You simply create a transcoding “job” specifying the location of your 
+source media file and how you want it transcoded. Amazon Elastic Transcoder also provides transcoding 
+presets for popular output formats, which means that you don’t need to guess about which settings
+work best on particular devices. All these features are available via service API, AWS SDKs and 
+the AWS Management Console.
+
+Like other Amazon Web Services products, there are no contracts or monthly commitments for using Amazon Elastic
+Transcoder — you simply pay based on the minutes you need to transcode, and resolution of the content transcoded.
+
+
+AWS workspace
+=============
+Amazon WorkSpaces is a managed, secure Desktop-as-a-Service (DaaS) solution. You can use Amazon 
+WorkSpaces to provision either Windows or Linux desktops in just a few minutes and quickly scale
+to provide thousands of desktops to workers across the globe. You can pay either monthly or hourly,
+just for the WorkSpaces you launch, which helps you save money when compared to traditional 
+desktops and on-premises VDI solutions. Amazon WorkSpaces helps you eliminate the complexity
+in managing hardware inventory, OS versions and patches, and Virtual Desktop Infrastructure (VDI),
+which helps simplify your desktop delivery strategy. With Amazon WorkSpaces, your users get a fast,
+responsive desktop of their choice that they can access anywhere, anytime, from any supported device.
+
+
+
+
+
+
+
+
+
 
 
 
