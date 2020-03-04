@@ -77,18 +77,18 @@ Basic
 
 ————————————
 Images
-: docker images
-: docker pull
-: docker rmi
+: docker images                        To lis the images  
+: docker pull                          To pull tha image
+: docker rmi                           To rmove one or more iamges 
 ————————————
 Containers
-: docker ps  (shows only running cotainers (use -a for show all containers))
-: docker rm  <container-name> 
-: docker run <image-name>
-: docker start -i <container-name>
-: docker stop <container-name>
-: docker logs <container-name>
-: docker exec -it <container-name> bash
+: docker ps                               (shows only running cotainers (use -a for show all containers))
+: docker rm <container-name>              remove one or more containers
+: docker run <image-name>                 create a container from image (first time used to container)
+: docker start -i <container-name>        To start the stoped container
+: docker stop <container-name>            To stop running container
+: docker logs <container-name>            To sess logs of contianer
+: docker exec -it <container-name> bash   To interact with container
 ————————————
 System
 : docker stats
@@ -96,8 +96,12 @@ System
 : docker system prune (to stop all stoped containers)
 
 
-day1
-====
+
+Online PRactice for docker:
+
+https://labs.play-with-docker.com/
+
+
 Practice below commands
 ========================
 
@@ -114,7 +118,23 @@ Practice below commands
    docker exec -it p-mysql bash
    
    mysql -uroot -padmin
+ 
+   To delete all images
+   =====================
+   docker rmi $(docker images -q)         
+  
+   To delete all container
+   ========================
+   docker rm $(docker ps -a -q)         
+    
+    
+  docker run --name a-centos -it centos bash      =>container will not be removed on exit
+  
+  docker run --name b-centos --rm -it centos bash  =>container will be removed on exit
+  
    
+   
+  
   
 Downloading the Latest MongoDB Docker Image
 ===========================================
@@ -150,6 +170,8 @@ root@123333# mkdir one two three
 root@123333# touch a.txt b.txt c.txt
 
 root@123333# echo "HEllo World" > hello.txt
+
+root@123333# exit
 
 docker commit -a "Pradeep Chinchole" -m "Added files and folder" pc-centos pradeepch82/pc-centos:1.1
 
@@ -286,10 +308,10 @@ Example  :Dockerfile
 FROM ubuntu
 MAINTAINER Pradeep Chinchole <pradeepch82@gmail.com>
 RUN apt-get update
-CMD ["echo", "Hello World..! from my first docker iamge"]
-CMD ["echo", "Hello World..! from my first docker iamge"]
-CMD ["echo", "Hello World..! from my first docker iamge"]
-CMD ["echo", "Hello World..! from my first docker iamge"]
+CMD ["echo", "Hello World..! from my first docker iamge1"]
+CMD ["echo", "Hello World..! from my first docker iamge2"]
+CMD ["echo", "Hello World..! from my first docker iamge3"]
+CMD ["echo", "Hello World..! from my first docker iamge4"]
 
 COMMANDS
 : docker build directoryOfDocekrfile
@@ -339,6 +361,19 @@ insert into employee values(102,'RAHIM',20000.00);
 insert into employee values(103,'DAVID',30000.00);
 insert into employee values(104,'PRADEEP',40000.00);
 
+Assignment
+==========
+Create a Image using Dockerfile to add mongodb 
+
+use school;
+
+db.students.insert({name:'ram',marks:56.77});
+db.students.insert({name:'ram',marks:56.77});
+db.students.insert({name:'ram',marks:56.77});
+
+db.teachers.insert({name:'ram',marks:56.77});
+db.students.insert({name:'ram',marks:56.77});
+db.students.insert({name:'ram',marks:56.77});
 
 
 References:
