@@ -794,6 +794,54 @@ control, throttling, monitoring, and API version management. API Gateway has no 
 or startup costs. You pay for the API calls you receive and the amount of data transferred out 
 and, with the API Gateway tiered pricing model, you can reduce your cost as your API usage scales.
 
+Shopping Function Ex.
+======================
+
+exports.handler=async(event)=>{
+  
+  if(event.httpMethod==='GET'){
+    return getItem(event);
+  }
+
+  if(event.httpMethod==='POST'){
+    return createCart(event);
+  }
+};
+
+const getItem=event=>{
+  let item={
+    description:'A Blue Shirt',
+    color:'Blue',
+    description:'A Blue Shirt',
+    size:'Medium',
+    price:760
+  }
+  
+  return {
+    statusCode:200,
+    body:JSON.stringify(item);
+  }
+}
+
+
+const createCart=event=>{
+  let body=JSON.parse(event.body);
+  console.log("This was the car which was passed :"+body);
+  
+  return {
+    statusCode:200,
+    body:JSON.stringify({
+      message:"The Cart is created successfully";
+    });
+  }
+}
+
+
+
+
+
+
+
 
 
 
